@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-8">
+			<button (click)="click_Back()" class="btn btn-secondary btn-sm"><span style="font-size:8pt; vertical-align: middle;">&#9664;</span> Back</button>
+			<span *ngIf="record" class="display-4" style="vertical-align: middle;">{{ record.Name }}</span>
+		</div>
+		<div *ngIf="record" class="col-4 my-sidebuttons" style="margin: auto 0;">
+			<button (click)="click_View(record.guid)" class="btn btn-primary">View</button>
+			<button (click)="click_Edit(record.guid)" class="btn btn-danger">Edit</button>
+			<span class="sidebar-label my-label" style="font-size:0.83em; margin-left:5px; vertical-align: middle; width:90px;">{{ infoService.info.MaxEdits - record.Edits }} Edits Left</span>
+		</div>
+	</div>
+	<div class="row">
+		<div id="D3SVG" class="col-8">
+			<!-- D3 SVG -->
+		</div>
+		<div class="col-4" *ngIf="record">
+			<div class="my-sidebar bg-faded rounded">
+				<div class="display-4 percentage-label" *ngIf="record">
+					<span class="my-label sidebar-label">Strength</span>{{ record.Percentage }}
+				</div>
+				<span class="sidebar-label my-label">Question 1</span>{{ record.question1 }}<br>
+				<span class="sidebar-label my-label">Name</span>{{ record.Name }}<br>
+				<span class="sidebar-label my-label">SSN</span>{{ record.SSN }}<br>
+				<span class="sidebar-label my-label">Birthdate</span>{{ record.Birthdate }}<br>
+			</div>
+		</div>
+	</div>
+</div>

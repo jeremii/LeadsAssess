@@ -1,0 +1,29 @@
+body {
+  font: 10px sans-serif;
+}
+
+.header-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.percentage-label {
+  font-weight: bold;
+  /*font-size: 3em;*/
+}
+.my-label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.sidebar-label {
+  width: 80px;
+  display: inline-block;
+}
+.my-sidebar {
+  font-size: 1.2em;
+  padding: 15px 15px;
+}
+.my-sidebuttons {
+}
+

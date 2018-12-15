@@ -1,0 +1,92 @@
+<div class="container">
+	<button class="btn btn-secondary" (click)="click_Back()"><span style="font-size:8pt; vertical-align: middle;">&#9664;</span> Back</button>
+	<form #f="ngForm" (ngSubmit)="onSubby(f)" novalidate>
+		<div id="basic-info" class="container">
+			<h2>Basics</h2>
+			<div class="row container1">
+				<div class="row col-5 form-group">
+					<label class="col-4 col-form-label">Last name</label>
+					<label *ngIf="theform" class="col-8 col-form-label col-form-label-lg">{{ theform.Name }}</label>
+				</div>
+				<div class="row col-3 form-group">
+					<label class="col-6 col-form-label">SSN</label>
+					<label *ngIf="theform" class="col-6 col-form-label">{{ theform.SSN }}</label>
+				</div>
+				<div class="row col-4 form-group">
+					<label class="col-5 col-form-label">Zip Code</label>
+					<label *ngIf="theform" class="col-7 col-form-label">{{ theform.Zipcode }}</label>
+				</div>
+			</div>
+			<div class="row container1">
+				<div class="row col-5 form-group">
+					<label class="col-4 col-form-label">Birth date</label>
+					<label *ngIf="theform" class="col-4 col-form-label">{{ theform.Birthdate }}</label>
+					<label class="col-4 col-form-label">Age: 34</label>
+				</div>
+				<div class="row col-3 form-group">
+					<label class="col-6 col-form-label">Question 13</label>
+					<label *ngIf="theform" class="col-6 col-form-label">{{ theform.answer13 }}</label>
+				</div>
+				<div class="row col-4 form-group">
+					<label class="col-5 col-form-label">Question 14</label>
+					<label *ngIf="theform" class="col-7 col-form-label">{{ theform.answer14 }}</label>
+				</div>
+			</div>
+			<h2>Questions</h2>
+			<div class="row form-group">
+				<label class="col-3 col-form-label col-form-label-lg">Question 1</label>
+				<label *ngIf="theform" class="col-9 col-form-label col-form-label-lg">{{ theform.answer1 }}</label>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label col-form-label-lg">Question 2</label>
+				<label *ngIf="theform" class="col-9 col-form-label col-form-label-lg">{{ theform.answer2 }}</label>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label">Question 3</label>
+				<label *ngIf="theform" class="col-9 col-form-label">{{ theform.answer3 }}</label>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label">Question 4</label>
+				<label *ngIf="theform" class="col-9 col-form-label">{{ theform.answer4 }}</label>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 5</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer5 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 6</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer6 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 7</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer7 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 8</label>
+						<label *ngIf="theform" class="col-3 col-form-label">{{ theform.answer8 }}</label>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 9</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer9 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 10</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer10 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 11</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer11 }}</label>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 12</label>
+						<label *ngIf="theform" class="col-5 col-form-label">{{ theform.answer12 }}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

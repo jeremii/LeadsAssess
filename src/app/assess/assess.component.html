@@ -1,0 +1,49 @@
+<div id="search" class="container">
+	<form #f=ngForm (ngSubmit)="onSubmit(f)" novalidate>
+		<div id="basic-info" class="row">
+			<div class="formgroup col-4 row">
+				<label class="col-4 col-form-label col-form-label-sm">Last Name</label>
+				<input class="col-8 form-control" #lastname name="Name" ngModel/>
+			</div>
+			<div class="formgroup col-2 row">
+				<label class="col-4 col-form-label col-form-label-sm">SSN</label>
+				<input class="col-8 form-control" #ssn name="SSN" ngModel/>
+			</div>
+			<div class="formgroup col-3 row">
+				<label class="col-5 col-form-label col-form-label-sm">Birthdate</label>
+				<input class="col-7 form-control" #birthdate name="Birthdate" ngModel/>
+			</div>
+			<div class="formgroup col-3 row">
+				<label class="col-5 col-form-label col-form-label-sm">Zip Code</label>
+				<input class="col-7 form-control" #zipcode name="Zipcode" ngModel/>
+			</div>
+			<input class="col-1 btn btn-primary" style="margin-left:15px;" type="Submit" value="Search" />
+		</div>
+	</form>
+</div>
+<div id="records-list" class="container">
+	<table class="table table-hover">
+		<thead class="thead-default">
+		    <tr class="row">
+		      <th class="col-1">Strength</th>
+		      <th class="col-6">Last Name</th>
+		      <th class="col-1">SSN</th>
+		      <th class="col-2">Birthdate</th>
+		      <th class="col-2"></th>
+		    </tr>
+	  	</thead>
+		<tr *ngFor="let item of records" class="row">
+			<td class="col-1"><h5><b>{{ ((item?.Points / infoService.info.MaxPoints * 100) | number ) + "%" }}</b></h5></td>
+			<td class="col-6"><h4>{{ item?.Name}}</h4></td>
+			<td class="col-1"><label>{{ item?.SSN }}</label></td>
+			<td class="col-2"><label>{{ item?.Birthdate }}</label></td>
+			<td class="col-2">
+				<div class="hover-btn">
+					<button (click)="click_Assess(item.guid)" class="btn btn-primary">Assess</button>
+					<button (click)="click_View(item.guid)" class="btn btn-secondary">View</button>
+					<!-- <button (click)="click_Edit(item.guid)" class="btn btn-secondary">Edit</button> -->
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>

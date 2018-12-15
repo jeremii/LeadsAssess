@@ -1,0 +1,127 @@
+<div class="container">
+	<form #f="ngForm" (ngSubmit)="onSubby(f)" novalidate>
+		<div id="basic-info" class="container">
+			<h2>Basics</h2>
+			<div class="row container1">
+				<div class="row col-5 form-group">
+					<label class="col-4 col-form-label col-form-label-lg">Last name</label>
+					<input class="form-control col-8 form-control-lg" #lastname name="Name" ngModel/>
+				</div>
+				<div class="row col-3 form-group">
+					<label class="col-6 col-form-label">SSN</label>
+					<input class="form-control col-6" #ssn name="SSN" ngModel />
+				</div>
+				<div class="row col-4 form-group">
+					<label class="col-5 col-form-label">Zip Code</label>
+					<input class="form-control col-7"  #zipcode name="Zipcode" ngModel/>
+				</div>
+			</div>
+			<div class="row container1">
+				<div class="row col-5 form-group">
+					<label class="col-4 col-form-label">Birth date</label>
+					<input class="form-control col-4" #birthdate name="Birthdate" ngModel placeholder="MM/DD/YYYY" />
+					<label class="col-4 col-form-label" #age name="age">&nbsp;Age: 34</label>
+				</div>
+				<div class="row col-3 form-group">
+					<label class="col-6 col-form-label">Question 1</label>
+					<select #question1 ngModel class="col-6 custom-select" name="question1">
+						<option selected></option>
+						<option value="A">A</option>
+						<option value="B">B</option>
+					</select>
+				</div>
+				<div class="row col-4 form-group">
+					<label class="col-5 col-form-label">Question 2</label>
+					<select #question2 ngModel class="col-7 custom-select" name="question2">
+						<option selected></option>
+						<option value="A">A</option>
+					</select>
+				</div>
+			</div>
+			<h2>Questions</h2>
+			<div class="row form-group">
+				<label class="col-3 col-form-label col-form-label-lg">Question 3</label>
+				<select #question3 ngModel class="col-9 custom-select form-control-lg" name="question3">
+					<!-- <option selected></option> -->
+					<option *ngFor="let item of question3" [ngValue]="question3.ID">{{item.Name}}</option>
+				</select>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label col-form-label-lg">Question 4</label>
+				<select #question4 ngModel class="col-9 custom-select form-control-lg" name="question4">
+					<!-- <option selected></option> -->
+					<option *ngFor="let item of question4" [ngValue]="item.ID" class="">{{ item.Name }}</option>
+				</select>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label">Question 5</label>
+				<select #question5 ngModel class="col-9 custom-select" name="question5">
+					<!-- <option></option> -->
+					<option *ngFor="let item of question5" [ngValue]="item.ID">{{ item.Name }}</option>
+				</select>
+			</div>
+			<div class="row form-group">
+				<label class="col-3 col-form-label">Question 6</label>
+				<select ngModel class="col-9 custom-select" name="question6">
+					<!-- <option></option> -->
+					<option *ngFor="let item of question6" [ngValue]="item.ID">{{ item.Name }}</option>
+				</select>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 7</label>
+						<input #question7 ngModel checked class="" type="radio" name="question7" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question7 ngModel class="" type="radio" name="question7" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 8</label>
+						<input #question8 ngModel checked class="" type="radio" name="question8" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question8 ngModel class="" type="radio" name="question8" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 9</label>
+						<input #question9 ngModel checked class="" type="radio" name="question9" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question9 ngModel class="" type="radio" name="question9" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 10</label>
+						<input #question10 ngModel name="question10" class="col-3 form-control" placeholder="MM/YYYY" />
+					</div>
+				</div>
+				
+				<div class="col-6">
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 11</label>
+						<input #question11 ngModel checked class="" type="radio" name="question11" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question11 ngModel class="" type="radio" name="question11" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 12</label>
+						<input #question12 ngModel checked class="" type="radio" name="question12" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question12 ngModel class="" type="radio" name="question12" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 13</label>
+						<input #question13 ngModel checked class="" type="radio" name="question13" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question13 ngModel class="" type="radio" name="question13" value="false"><span>&nbsp;NO</span>
+					</div>
+					<div class="row form-group">
+						<label class="col-7 col-form-label">Question 14</label>
+						<input #question14 ngModel checked class="" type="radio" name="question14" value="true"><span>&nbsp;YES</span>
+						<span class="col-1">&nbsp;</span>
+						<input #question14 ngModel class="" type="radio" name="question14" value="false"><span>&nbsp;NO</span>
+					</div>
+				</div>
+			</div>
+		<br/>
+		<input type="Submit" class="container btn btn-primary" />
+		</div>
+	</form>
+</div>

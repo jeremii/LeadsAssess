@@ -1,0 +1,17 @@
+.result-box {
+	width: 600px;
+	height: 360px;
+	margin: 0 auto;
+	text-align: center;
+}
+.message1, .message2, .btn-NewForm {
+	color: white;
+	text-align: center;
+}
+.message1 {
+	padding-top: 100px;
+	margin-bottom: 5px;
+}
+.message2 {
+	font-size: 1.5em;
+}

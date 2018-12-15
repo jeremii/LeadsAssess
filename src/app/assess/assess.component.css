@@ -1,0 +1,14 @@
+#search {
+	margin-bottom: 15px;
+}
+
+.hover-btn {
+	display: none;
+}
+table tr:hover .hover-btn {
+	display: block;
+}
+#records-list table thead th {
+	text-transform: capitalize;
+	font-size: 12px;
+}

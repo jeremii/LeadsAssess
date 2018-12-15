@@ -1,0 +1,30 @@
+#basic-info
+{
+}
+#basic-questions
+{
+
+}
+.divider {
+	border-top: 1px solid #CCC;
+	width:100%;
+	margin: 15px 0px 30px 0px;
+}
+#basic-info .row.container1 {
+	/*margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;*/
+	
+}
+#basic-info label.col-4 {
+	
+}
+#basic-info .row .row:first-child label.col-4:first-child {
+	/*padding-left: 0px !important;*/
+}
+#basic-info .row .row:last-child input, #basic-info .row .row:last-child select {
+}
+.row .col-9.custom-select {
+	
+}
